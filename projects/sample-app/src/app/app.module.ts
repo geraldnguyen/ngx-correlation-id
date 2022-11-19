@@ -12,7 +12,7 @@ import { NgxCorrelationIdModule } from 'ngx-correlation-id';
   imports: [
     BrowserModule,
     HttpClientModule,
-    NgxCorrelationIdModule
+    NgxCorrelationIdModule.withConfig('ui')
   ],
   providers: [],
   bootstrap: [AppComponent]

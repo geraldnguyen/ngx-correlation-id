@@ -1,6 +1,6 @@
 {
   "name": "ngx-correlation-id",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Injects a correlation id into every outgoing http request",
   "peerDependencies": {
     "@angular/common": "^14.2.0",
