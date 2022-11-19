@@ -9,9 +9,18 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AppComponent {
   title = 'sample-app';
+  echoResponse = 'Please make a request first';
 
-  constructor(http: HttpClient) {
-    http.get('https://echook.azurewebsites.net/echo', {
-    }).subscribe();
+  constructor(private http: HttpClient) { }
+
+  makeHttpRequest() {
+    this.http.get('https://echook.azurewebsites.net/echo')
+      .subscribe(resp => {
+        this.echoResponse = JSON.stringify(resp, null, 2);
+      });
+  }
+
+  reset() {
+    this.echoResponse = '';
   }
 }
