@@ -1,27 +1,34 @@
-# NgxCorrelationId
+**Under development - please check again later**
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.9.
+# Getting started
 
-## Development server
+Import the module into your `app.module.ts`
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+```
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    NgxCorrelationIdModule
+  ],
 
-## Code scaffolding
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Make a http request
 
-## Build
+```
+http.get('https://www.google.com').subscribe();
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Check the request header. There should be a `x-correlation-id` present 
 
-## Running unit tests
+# Release Notes
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Version 0.1.0
 
-## Running end-to-end tests
+- CorrelationId comprise of only timestamp
+- Http request header `x-correlation-id` is used to carry the correlation id
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## TODO
+- Support a system parameter - see https://www.npmjs.com/package/simple-correlation-id for more details
+- Allow customizing header name
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
