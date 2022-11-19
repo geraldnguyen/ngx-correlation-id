@@ -16,7 +16,7 @@ Import the module into your `app.module.ts`
 Make a http request
 
 ```
-http.get('https://www.google.com').subscribe();
+http.get('https://echook.azurewebsites.net/echo').subscribe();
 ```
 
 Check the request header. There should be a `x-correlation-id` present 
@@ -38,7 +38,6 @@ Check the request header. There should be a `x-correlation-id` present
 
 
 ## Version 0.2.0
-
 - CorrelationId comprise of only timestamp
 - Http request header `x-correlation-id` is used to carry the correlation id
 

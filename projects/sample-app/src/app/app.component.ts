@@ -11,6 +11,7 @@ export class AppComponent {
   title = 'sample-app';
 
   constructor(http: HttpClient) {
-    http.get('https://www.google.com').subscribe();
+    http.get('https://echook.azurewebsites.net/echo', {
+    }).subscribe();
   }
 }
