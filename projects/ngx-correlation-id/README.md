@@ -68,7 +68,7 @@ http.get('https://echook.azurewebsites.net/echo').subscribe();
 
 ## Version 0.3.0
 
-### Support a system parameter - see https://www.npmjs.com/package/simple-correlation-id for more details
+Support a system parameter - see https://www.npmjs.com/package/simple-correlation-id for more details
 
 ```
   imports: [
