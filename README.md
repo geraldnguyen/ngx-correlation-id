@@ -23,7 +23,7 @@ Check the request header. There should be a `x-correlation-id` present
 
 # Release Notes
 
-## Version 0.1.0
+## Version 0.2.0
 
 - CorrelationId comprise of only timestamp
 - Http request header `x-correlation-id` is used to carry the correlation id
@@ -31,4 +31,5 @@ Check the request header. There should be a `x-correlation-id` present
 ## TODO
 - Support a system parameter - see https://www.npmjs.com/package/simple-correlation-id for more details
 - Allow customizing header name
+- Add Test
 

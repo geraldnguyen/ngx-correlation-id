@@ -1,24 +1,35 @@
-# NgxCorrelationId
+**Under development - please check again later**
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.0.
+# Getting started
 
-## Code scaffolding
+Import the module into your `app.module.ts`
 
-Run `ng generate component component-name --project ngx-correlation-id` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-correlation-id`.
-> Note: Don't forget to add `--project ngx-correlation-id` or else it will be added to the default project in your `angular.json` file. 
+```
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    NgxCorrelationIdModule
+  ],
 
-## Build
+```
 
-Run `ng build ngx-correlation-id` to build the project. The build artifacts will be stored in the `dist/` directory.
+Make a http request
 
-## Publishing
+```
+http.get('https://www.google.com').subscribe();
+```
 
-After building your library with `ng build ngx-correlation-id`, go to the dist folder `cd dist/ngx-correlation-id` and run `npm publish`.
+Check the request header. There should be a `x-correlation-id` present 
 
-## Running unit tests
+# Release Notes
 
-Run `ng test ngx-correlation-id` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Version 0.2.0
 
-## Further help
+- CorrelationId comprise of only timestamp
+- Http request header `x-correlation-id` is used to carry the correlation id
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## TODO
+- Support a system parameter - see https://www.npmjs.com/package/simple-correlation-id for more details
+- Allow customizing header name
+- Add Test
+
