@@ -1,5 +1,3 @@
-**Under development - please check again later**
-
 # Getting started
 
 ## 1. Import the module into your `app.module.ts`
