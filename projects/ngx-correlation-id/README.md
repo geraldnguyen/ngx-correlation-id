@@ -95,12 +95,10 @@ Support a system parameter - see https://www.npmjs.com/package/simple-correlatio
 
 ```
 
-
 ## Version 0.2.0
 - CorrelationId comprise of only timestamp
 - Http request header `x-correlation-id` is used to carry the correlation id
 
 ## TODO
-- Allow customizing header name
 - Add Test
 
