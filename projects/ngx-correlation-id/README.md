@@ -64,6 +64,24 @@ http.get('https://echook.azurewebsites.net/echo').subscribe();
 
 # Release Notes
 
+## Version 0.4.0
+
+Customize request header carrying correlation id
+
+```
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    NgxCorrelationIdModule.withConfig( {
+      system: 'ui',
+      header: 'x-your-own-header-name'
+    });
+    // NgxCorrelationIdModule.withConfig(['ui', 'x-your-own-header-name']) is also possible
+  ],
+```
+
+*Note: `withConfig('system')` is still supported*
+
 ## Version 0.3.0
 
 Support a system parameter - see https://www.npmjs.com/package/simple-correlation-id for more details

@@ -1,7 +1,7 @@
 import { ModuleWithProviders, NgModule } from '@angular/core';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { CorrelationIdInterceptor } from './correlation-id.interceptor';
-import { SYSTEM } from './constants';
+import { ConfigOptions, CONFIG_OPTION } from './constants';
 
 @NgModule({
   declarations: [
@@ -15,11 +15,11 @@ import { SYSTEM } from './constants';
   ]
 })
 export class NgxCorrelationIdModule { 
-  static withConfig(system: string): ModuleWithProviders<NgxCorrelationIdModule> {
+  static withConfig(options: ConfigOptions): ModuleWithProviders<NgxCorrelationIdModule> {
     return {
       ngModule: NgxCorrelationIdModule,
       providers: [
-        { provide: SYSTEM, useValue: system }
+        { provide: CONFIG_OPTION, useValue: options }
       ]
     };
   }
